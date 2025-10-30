@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { signup } from "@/app/actions/authActions";
+import Link from "next/link";
 export default function SignupPage() {
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const [errors, setErrors] = useState<any>({});
@@ -60,12 +61,9 @@ export default function SignupPage() {
         </form>
         <p className="mt-4 text-center text-sm">
           Already have an account?&nbsp;
-          {/* <span
-            className="text-blue-500 hover:underline"
-            onClick={() => router.push("/login")}
-          >
+          <Link className="text-blue-500 hover:underline" href="/login">
             Login
-          </span> */}
+          </Link>
         </p>
       </Card>
     </div>

@@ -6,12 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { authenticate } from "@/app/actions/authActions";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
-  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -62,12 +60,9 @@ export default function LoginPage() {
         </form>
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Don&apos;t have an account?{" "}
-          {/* <span
-            className="text-blue-500 hover:underline"
-            onClick={() => router.push("/signup")}
-          >
+          <Link className="text-blue-500 hover:underline" href="/signup">
             Sign up
-          </span> */}
+          </Link>
         </p>
       </Card>
     </div>
