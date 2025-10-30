@@ -24,5 +24,6 @@ export const authConfig = {
       return false; // Redirect to login
     },
   },
+  trustHost: true,
   providers: [],
 } satisfies NextAuthConfig;
