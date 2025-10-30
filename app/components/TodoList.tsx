@@ -30,8 +30,10 @@ export default function TodoList({ todos }: TodoListProps) {
       )}
 
       {completedTodos.length > 0 && (
-        <div>
-          <h2 className="">Completed ({completedTodos.length})</h2>
+        <div className="mb-6">
+          <h2 className="text-lg font-semibold mb-3">
+            Completed ({completedTodos.length})
+          </h2>
           {completedTodos.map((todo) => (
             <TodoItem key={todo.id} todo={todo} />
           ))}
