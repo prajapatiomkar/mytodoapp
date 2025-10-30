@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { authenticate } from "@/app/actions/authActions";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [error, setError] = useState("");
@@ -59,9 +60,9 @@ export default function LoginPage() {
         </form>
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Don&apos;t have an account?{" "}
-          {/* <Link className="text-blue-500 hover:underline" href="/signup">
+          <Link className="text-blue-500 hover:underline" href="/signup">
             Sign up
-          </Link> */}
+          </Link>
         </p>
       </Card>
     </div>
